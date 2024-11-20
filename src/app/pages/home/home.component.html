@@ -1,0 +1,29 @@
+<section class="main-container">
+    <div class="content-container">
+        <div class="child">
+            <div class="question-container">
+                <span id="theme"><i>{{ title }}</i></span>
+                <h2 id="title" *ngIf="!finished">Questão {{ questionIndex+1 }}</h2>
+                <p id="quest" *ngIf="!finished">{{ questionSelected.question }}</p>
+            </div>
+        </div>
+        <div class="child" *ngIf="!finished">
+            <div class="options-container">
+                <button class="option" *ngFor="let q of questionSelected.options" (click)="playerChoose(q.alias)">{{ q.name }}</button>
+            </div>     
+        </div>
+        <div class="child" *ngIf="finished">
+            <div class="result">
+                <h2>Resultado:</h2>
+                <p>{{ answerSelected }}</p>
+            </div>
+        </div>
+        <div class="child">
+            <div class="buttons">
+                <button class="next">Anterior</button>
+                <button class="previous">Próximo</button>
+            </div>
+        </div>
+        
+    </div>
+</section>

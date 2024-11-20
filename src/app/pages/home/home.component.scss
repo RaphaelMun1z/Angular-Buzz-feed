@@ -1,0 +1,167 @@
+.main-container{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    min-height: 100vh;
+    padding: 3vw 3vh;
+    justify-content: center;
+    align-items: center;
+    
+    .content-container{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 60%;
+        height: fit-content;
+        background-color: #fff;
+        border-radius: 40px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        
+        .child{
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 100%;
+            height: fit-content;
+            padding: 1rem;
+            
+            &:nth-child(2){
+                justify-content: space-between;
+            }
+            
+            .question-container{
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(238, 238, 238);
+                border-radius: 30px;
+                padding: 5%;
+
+                #theme{
+                    color: rgb(144, 147, 196);
+                    font-size: 1rem;
+                }
+                
+                #title{
+                    font-size: 3.5rem;
+                    color: rgb(144, 147, 196);
+                    text-shadow: 
+                    1px 1px 0 white, 
+                    -1px 1px 0 white, 
+                    1px -1px 0 white, 
+                    -1px -1px 0 white;
+                    line-height: 4rem;
+                    margin: 2vh 0;
+                }
+                
+                #quest{
+                    font-size: 1.3rem;
+                    color: rgb(104, 107, 173);
+                }
+            }
+            
+            .options-container{
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                height: fit-content;
+                margin-bottom: 5vh;
+                justify-content: center;
+                gap: 1vh 1vw;
+                
+                .option{
+                    position: relative;
+                    display: flex;
+                    width: 45%;
+                    height: fit-content;
+                    padding: 1vh 1vw;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: transparent;
+                    border-radius: 15px;
+                    color: rgb(86, 86, 86);
+                    border: 2px solid rgb(232, 232, 238);
+                    cursor: pointer;
+                    transition: all .1s ease-in-out;
+                    
+                    &:hover{
+                        transition: all .1s ease-in-out;
+                        opacity: .5;
+                    }
+                }
+            }
+            
+            .buttons{
+                position: relative;
+                display: flex;
+                width: 100%;
+                height: auto;
+                gap: 1vw;
+                justify-content: flex-end;
+                
+                button{
+                    position: relative;
+                    display: flex;
+                    width: fit-content;
+                    height: fit-content;
+                    padding: 1.5vh 2vw;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all .1s ease-in-out;
+                    
+                    &:hover{
+                        transition: all .1s ease-in-out;
+                        opacity: .5;
+                    }
+                    
+                    &.next{
+                        color: rgb(115, 119, 194);
+                        background-color: transparent;
+                        border: none;
+                        border-radius: 15px;
+                        box-shadow: rgba(115, 119, 194, .5) 0px 0px 0px 2px;
+                    }
+                    
+                    &.previous{
+                        color: #fff;
+                        background-color: transparent;
+                        border: 1px solid #fff;
+                        border-radius: 15px;
+                        background-color: rgba(255, 143, 0, 1);
+                    }
+                }
+            }
+
+            .result{
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                width: 100%;
+                height: fit-content;
+
+                h2{
+                    font-size: 2rem;
+                    color: rgb(144, 147, 196);
+                }
+
+                p{
+                    width: fit-content;
+                    font-size: 1.1rem;
+                    color: rgb(78, 65, 42);
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
